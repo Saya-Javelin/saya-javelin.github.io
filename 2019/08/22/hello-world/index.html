@@ -22,16 +22,26 @@
     <link rel="stylesheet" href="/lib/nprogress/nprogress.css?v=0.2.0">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
     
-        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+        <link rel="stylesheet" href="/lib/prettify/custom.min.css">
     
     <link rel="stylesheet" href="/css/main.css">
 
     
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?8b9c36226778df5b3ccbe55e1259801e";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
 </head>
 
 
 <body>
-<header style="height: 70vh;">
+<header style="height: 75vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
 <div class="container">
     <a class="navbar-brand" href="/">&nbsp;<strong>Saya-Javelin的博客</strong>&nbsp;</a>
@@ -46,24 +56,29 @@
         <ul class="navbar-nav ml-auto text-center">
             
             <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/">首页</a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="/archives/">Archives</a>
+                <a class="nav-link" href="/archives/">归档</a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="/categories/">Categories</a>
+                <a class="nav-link" href="/categories/">分类</a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="/tags/">Tags</a>
+                <a class="nav-link" href="/tags/">标签</a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="/about/">About</a>
+                <a class="nav-link" href="/about/">关于</a>
             </li>
+            
+            
+                <li class="nav-item" id="search-btn">
+                    <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+                </li>
             
         </ul>
     </div>
@@ -72,7 +87,7 @@
 
 </nav>
     <div class="view intro-2"
-         style="background: url('/img/post.jpg')no-repeat center center;background-size: cover;">
+         style="background: url('https://img.xjh.me/random_img.php?type=bg&return=302')no-repeat center center;background-size: cover;">
         <div class="full-bg-img">
             <div class="mask rgba-black-light flex-center">
                 <div class="container text-center white-text wow fadeInUp">
@@ -81,7 +96,7 @@
                     </span>
                     
                         <br>
-                        <p>星期四, 八月 22日 2019, 10:57 晚上</p>
+                        <p>星期四, 八月 22日 2019, 晚上 10:57</p>
                     
                 </div>
             </div>
@@ -124,7 +139,7 @@
                                 
                             </p>
                             
-                                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                                <p class="note note-warning">文章若无特殊声明，则采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> ，转载时请一定要注明出处哦！</p>
                             
                         </div>
                     </div>
@@ -148,10 +163,62 @@
 <div class="col-lg-7 mx-auto nopadding-md">
     <div class="container comments mx-auto" id="comments">
         
+            <br><br>
+            
+            
+    <div id="vcomments" style="width: 90%; margin: 0 auto;"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <script>
+        var notify = 'false' == true ? true : false;
+        var verify = 'false' == true ? true : false;
+        window.onload = function () {
+            new Valine({
+                el: '#vcomments',
+                notify: notify,
+                verify: verify,
+                app_id: "gnurgtajL1twTSJcMbviI5Gu-gzGzoHsz",
+                app_key: "KLb9Xhq39kHJCPOczNacxc5s",
+                placeholder: "有没有想对咱说些啥呢~",
+                avatar: "identicon",
+                meta: ['nick', 'mail', 'link'],
+                pageSize: "10",
+                visitor: "false"
+            });
+        };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" rel="nofollow noopener">comments
+            powered by Valine.</a></noscript>
+	    
+        
     </div>
 </div>
+
     
 </main>
+
+
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="None" data-success="success" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <footer class="mt-5">
   <div class="text-center py-3">
@@ -194,7 +261,7 @@
             "Hello World&nbsp;",
         ],
         cursorChar: "_",
-        typeSpeed: 70,
+        typeSpeed: 60,
         startDelay: 300, //开始之前延迟300毫秒
         loop: false,
         });
@@ -209,7 +276,21 @@
         visible: "false",
         
       };
-      anchors.add(".post-content > h1,h2,h3,h4,h5,h6");
+      var el = "h1,h2,h3,h4,h5,h6".split(",")
+      var res = []
+      for (item of el) {
+        res.push(".markdown-body > " + item)
+      }
+      anchors.add(res.join(", "))
+    </script>
+  
+
+  
+    <script src="/js/local-search.js"></script>
+    <script>
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function(){ getSearchFile(path); this.onclick = null }
     </script>
   
 <script type="text/x-mathjax-config">

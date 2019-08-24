@@ -22,11 +22,21 @@
     <link rel="stylesheet" href="/lib/nprogress/nprogress.css?v=0.2.0">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
     
-        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+        <link rel="stylesheet" href="/lib/prettify/custom.min.css">
     
     <link rel="stylesheet" href="/css/main.css">
 
     
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?8b9c36226778df5b3ccbe55e1259801e";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
 </head>
 
 
@@ -46,24 +56,29 @@
         <ul class="navbar-nav ml-auto text-center">
             
             <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/">首页</a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="/archives/">Archives</a>
+                <a class="nav-link" href="/archives/">归档</a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="/categories/">Categories</a>
+                <a class="nav-link" href="/categories/">分类</a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="/tags/">Tags</a>
+                <a class="nav-link" href="/tags/">标签</a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="/about/">About</a>
+                <a class="nav-link" href="/about/">关于</a>
             </li>
+            
+            
+                <li class="nav-item" id="search-btn">
+                    <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+                </li>
             
         </ul>
     </div>
@@ -96,6 +111,30 @@
                         <div class="col-12 col-md-10 m-auto">
                             
 
+
+    <div class="row mb-4 mx-auto">
+        
+        
+        <div class="col-12 col-md-8 m-auto">
+            <a href="/2019/08/23/test/">
+                <p class="h4 index-header">test</p>
+                <div class="index-excerpt">
+                    
+                        <div class="index-text mb-1">啦啦啦啦啦啦啦啦啦啦...</div>
+                    
+                </div>
+            </a>
+
+            
+                <div>
+                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-08-23
+                    &nbsp;&nbsp;
+                    
+                    
+                </div>
+            
+        </div>
+    </div>
 
     <div class="row mb-4 mx-auto">
         
@@ -144,6 +183,29 @@ More info: Deployment
     
 </main>
 
+
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="None" data-success="success" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <footer class="mt-5">
   <div class="text-center py-3">
     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
@@ -180,7 +242,7 @@ More info: Deployment
             "欢迎来到咱博客的说~&nbsp;",
         ],
         cursorChar: "_",
-        typeSpeed: 70,
+        typeSpeed: 60,
         startDelay: 300, //开始之前延迟300毫秒
         loop: false,
         });
@@ -195,7 +257,21 @@ More info: Deployment
         visible: "false",
         
       };
-      anchors.add(".post-content > h1,h2,h3,h4,h5,h6");
+      var el = "h1,h2,h3,h4,h5,h6".split(",")
+      var res = []
+      for (item of el) {
+        res.push(".markdown-body > " + item)
+      }
+      anchors.add(res.join(", "))
+    </script>
+  
+
+  
+    <script src="/js/local-search.js"></script>
+    <script>
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function(){ getSearchFile(path); this.onclick = null }
     </script>
   
 <script type="text/x-mathjax-config">
