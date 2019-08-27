@@ -176,8 +176,8 @@ int main () {
                 el: '#vcomments',
                 notify: notify,
                 verify: verify,
-                app_id: "qYaQWfwjnt7OVC5fw3rkSqqx-gzGzoHsz",
-                app_key: "jfQtLVVKL3rQf0jN6W8SE6hJ",
+                app_id: "tR6HPCDEBDB2rve2daGvCr02-MdYXbMMI",
+                app_key: "srPbvbi137sVxCdvT2oJjbnJ",
                 placeholder: "有没有想对咱说些啥呢~",
                 avatar: "identicon",
                 meta: ['nick', 'mail', 'link'],
@@ -291,5 +291,20 @@ int main () {
       inputArea.onclick = function(){ getSearchFile(path); this.onclick = null }
     </script>
   
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
