@@ -3,48 +3,38 @@
 
 
 
-
+<% var joinstr="theme.title_join_string" title="config.title" if(page.title) { title].join(joinstr) } %>
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="UTF-8">
-    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<%- url_for(theme.apple_touch_icon) %>">
+    <link rel="icon" type="image/png" href="<%- url_for(theme.favicon) %>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="Saya-Javelin的个人博客">
-    <meta name="author" content="Saya-Javelin">
-    <meta name="keywords" content="博客,个人博客,信息学竞赛,蒟蒻,菜鸡,菜鸟">
-    <title>Categories ~ Saya-Javelin的博客</title>
-    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css?v=5.7.2">
-    <link rel="stylesheet" href="/lib/mdbootstrap/css/bootstrap.min.css?v=4.3.1">
-    <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css?v=4.8.7">
-    <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
-    <link rel="stylesheet" href="/lib/nprogress/nprogress.css?v=0.2.0">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
-    
-        <link rel="stylesheet" href="/lib/prettify/custom.min.css">
-    
-    <link rel="stylesheet" href="/css/main.css">
+    <meta name="description" content="<%= config.description %>">
+    <meta name="author" content="<%= config.author %>">
+    <meta name="keywords" content="<%= config.keywords %>">
+    <title><%= title %></%=></title>
+    <%- css("lib font-awesome css all.min.css?v="5.7.2")" %>
+    <%- css("lib mdbootstrap css bootstrap.min.css?v="4.3.1")" %>
+    <%- css("lib mdbootstrap css mdb.min.css?v="4.8.7")" %>
+    <%- css("lib github-markdown github-markdown.min.css") %>
+    <%- css("lib nprogress nprogress.css?v="0.2.0")" %>
+    <%- css(" at.alicdn.com t font_1067060_qzomjdt8bmp.css") %>
+    <% if(theme.highlight.enable){ %>
+        <%- css('lib prettify ' + theme.highlight.theme '.min.css') %>
+    <% } %>
+    <%- css("css main.css") %>
 
-    
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?8b9c36226778df5b3ccbe55e1259801e";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-
-</head>
-
+    <%- partial('_partial analytics.ejs') %>
+</%-></%-></%></%-></%></%-></%-></%-></%-></%-></%-></head>
+</%>
 
 <body>
 <header style="height: 85vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
 <div class="container">
-    <a class="navbar-brand" href="/">&nbsp;<strong>Saya-Javelin的博客</strong>&nbsp;</a>
+    <a class="navbar-brand" href="<%- url_for() %>">&nbsp;<strong><%= theme.navbar.blog_title || config.title %></strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,32 +44,16 @@
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto text-center">
-            
+            <% for(var i in theme.navbar.menu) { %>
             <li class="nav-item">
-                <a class="nav-link" href="/">首页</a>
+                <a class="nav-link" href="<%- url_for(theme.navbar.menu[i]) %>"><%= i %></a>
             </li>
-            
-            <li class="nav-item">
-                <a class="nav-link" href="/archives/">归档</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link" href="/categories/">分类</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link" href="/tags/">标签</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link" href="/about/">关于</a>
-            </li>
-            
-            
+            <% } %>
+            <% if(theme.search.enable) { %>
                 <li class="nav-item" id="search-btn">
                     <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
                 </li>
-            
+            <% } %>
         </ul>
     </div>
 </div>
@@ -151,68 +125,80 @@
     <i class="iconfont icon-love"></i>
     <a href="https://github.com/0x2e/Material-T" target="_blank" rel="nofollow noopener"> <b>Material-T</b></a>
     <br>
-    
+    <% if(theme.footer.beian.enable) { %>
+      <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener"><%- theme.footer.beian.icp_text %></a>
+      <% if(theme.footer.beian.police_text && theme.footer.beian.police_code) { %>
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=<%- theme.footer.beian.police_code %>" target="_blank" rel="nofollow noopener"> | <%- theme.footer.beian.police_text %></a>
+      <% } %>
+    <% } %>
   </div>
 </footer>
 
   <!-- SCRIPTS -->
-  <script src="/lib/mdbootstrap/js/jquery-3.4.1.min.js"></script>
-  <script src="/lib/mdbootstrap/js/popper.min.js"></script>
-  <script src="/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1"></script>
-  <script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
-  <script src="/lib/nprogress/nprogress.min.js?v=0.2.0"></script>
-  <script src="/js/main.js"></script>
-  
-  
-    <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
+  <%- js("/lib/mdbootstrap/js/jquery-3.4.1.min.js") %>
+  <%- js("/lib/mdbootstrap/js/popper.min.js") %>
+  <%- js("/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1") %>
+  <%- js("/lib/mdbootstrap/js/mdb.min.js?v=4.8.7") %>
+  <%- js("/lib/nprogress/nprogress.min.js?v=0.2.0") %>
+  <%- js("js/main.js") %>
+  <% if(is_post()){ %>
+    <% if(theme.post.toc.enable){ %>
+      <%- js("/lib/tocbot/tocbot.min.js?v=4.7.0") %>
+    <% } %>
+    <%- js("js/post.js") %>
+  <% } %>
+  <% if(theme.highlight.enable){ %>
+    <%- js("/lib/prettify/prettify.min.js?v=0.1.0") %>
     <script>
       $(document).ready(function(){
         $('pre').addClass('prettyprint linenums');
         prettyPrint();
       })
     </script>
-  
-  
-    <script src="/lib/typed/typed.min.js?v=2.0.9"></script>
+  <% } %>
+  <% if(theme.fun_features.typing.enable){ %>
+    <%- js("/lib/typed/typed.min.js?v=2.0.9") %>
     <script>
         var typed = new Typed('#subtitle', {
           strings: [
             '  ',
-            "Categories&nbsp;",
+            "<%- data.subtitle %>&nbsp;",
         ],
-        cursorChar: "_",
-        typeSpeed: 60,
+        cursorChar: "<%- theme.fun_features.typing.cursorChar %>",
+        typeSpeed: <%- theme.fun_features.typing.typeSpeed %>,
         startDelay: 300, //开始之前延迟300毫秒
-        loop: false,
+        loop: <%- theme.fun_features.typing.loop %>,
         });
         $(".typed-cursor").addClass("h2");
     </script>
-  
-  
-    <script src="/lib/anchor/anchor.min.js?v=4.2.0"></script>
+  <% } %>
+  <% if(theme.fun_features.anchorjs.enable){ %>
+    <%- js("/lib/anchor/anchor.min.js?v=4.2.0") %>
     <script>
       anchors.options = {
-        placement: "right",
-        visible: "false",
-        
+        placement: "<%- theme.fun_features.anchorjs.placement %>",
+        visible: "<%- theme.fun_features.anchorjs.visible %>",
+        <% if(theme.fun_features.anchorjs.icon != ""){ %>
+        icon: "<%- theme.fun_features.anchorjs.icon %>" 
+        <% } %>
       };
-      var el = "h1,h2,h3,h4,h5,h6".split(",")
+      var el = "<%- theme.fun_features.anchorjs.element || 'h1,h2,h3,h4,h5,h6' %>".split(",")
       var res = []
       for (item of el) {
         res.push(".markdown-body > " + item)
       }
       anchors.add(res.join(", "))
     </script>
-  
+  <% } %>
 
-  
-    <script src="/js/local-search.js"></script>
+  <% if(theme.search.enable){ %>
+    <%- js("/js/local-search.js") %>
     <script>
-      var path = "/local-search.xml";
+      var path = "<%- theme.search.path || '/local-search.xml' %>";
       var inputArea = document.querySelector("#local-search-input");
       inputArea.onclick = function(){ getSearchFile(path); this.onclick = null }
     </script>
-  
+  <% } %>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
