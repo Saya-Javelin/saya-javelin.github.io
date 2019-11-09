@@ -1,156 +1,156 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png"><link rel="icon" type="image/png" href="/img/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="Saya-Javelin的个人博客"><meta name="author" content="Saya-Javelin"><meta name="keywords" content="博客,个人博客,信息学竞赛,蒟蒻,NOIP,CSP,Saya-Javelin,飒殇◎黎"><title>NOIp2017-逛公园 ~ Saya-Javelin的博客</title><link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"><link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"><link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css"><link rel="stylesheet" href="/lib/prettify/custom.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"></head><body><header style="height:90vh"><nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"><div class="container"><a class="navbar-brand" href="/">&nbsp;<strong>Saya-Javelin的博客</strong>&nbsp;</a> <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon"><span></span><span></span><span></span></div></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto text-center"><li class="nav-item"><a class="nav-link" href="/">首页</a></li><li class="nav-item"><a class="nav-link" href="/archives/">归档</a></li><li class="nav-item"><a class="nav-link" href="/categories/">分类</a></li><li class="nav-item"><a class="nav-link" href="/tags/">标签</a></li><li class="nav-item"><a class="nav-link" href="/about/">关于</a></li><li class="nav-item" id="search-btn"><a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a></li></ul></div></div></nav><div class="view intro-2" id="background" style="background:url(/img/posts/sol/1/bg.png) no-repeat center center;background-size:cover;background-attachment:fixed"><div class="full-bg-img"><div class="mask rgba-black-light flex-center"><div class="container text-center white-text fadeInUp"><span class="h2" id="subtitle"></span><br><p class="mt-3"><i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp; 星期四, 十一月 7日 2019, 10:57 晚上</p><p>&nbsp;<i class="far fa-chart-bar"></i> <span class="post-count">1.1k 字 </span>&nbsp; &nbsp;<i class="far fa-clock"></i> <span class="post-count">5 分钟 </span>&nbsp; &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp; <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span> 次 </span>&nbsp;</p></div><div class="scroll-down-bar"><i class="fas fa-angle-down scroll-down-arrow"></i></div></div></div></div></header><main><div class="container-fluid"><div class="row"><div class="d-none d-lg-block col-lg-2"></div><div class="col-lg-8 nopadding-md"><div class="py-5 z-depth-3" id="board"><div class="post-content mx-auto" id="post"><div class="markdown-body"><h3 id="noip-day1-t3-逛公园"><a class="markdownIt-Anchor" href="#noip-day1-t3-逛公园"></a> NOIp Day1 T3 逛公园</h3><p>调了两天，自闭了</p><a id="more"></a><pre class="highlight"><code class="cpp"><span class="hljs-comment">/*/Saya-Javelin/*/</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstring&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstdio&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;queue&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> iln inline</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> rgt register</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> int long long</span>
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png"><link rel="icon" type="image/png" href="/img/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content="Saya-Javelin的个人博客"><meta name="author" content="Saya-Javelin"><meta name="keywords" content="博客,个人博客,信息学竞赛,蒟蒻,NOIP,CSP,Saya-Javelin,飒殇◎黎"><title>NOIp2017-逛公园 ~ Saya-Javelin的博客</title><link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"><link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"><link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css"><link rel="stylesheet" href="/lib/prettify/custom.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"></head><body><header style="height:90vh"><nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"><div class="container"><a class="navbar-brand" href="/">&nbsp;<strong>Saya-Javelin的博客</strong>&nbsp;</a> <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon"><span></span><span></span><span></span></div></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto text-center"><li class="nav-item"><a class="nav-link" href="/">首页</a></li><li class="nav-item"><a class="nav-link" href="/archives/">归档</a></li><li class="nav-item"><a class="nav-link" href="/categories/">分类</a></li><li class="nav-item"><a class="nav-link" href="/tags/">标签</a></li><li class="nav-item"><a class="nav-link" href="/about/">关于</a></li><li class="nav-item" id="search-btn"><a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a></li></ul></div></div></nav><div class="view intro-2" id="background" style="background:url(/img/posts/sol/1/bg.png) no-repeat center center;background-size:cover;background-attachment:fixed"><div class="full-bg-img"><div class="mask rgba-black-light flex-center"><div class="container text-center white-text fadeInUp"><span class="h2" id="subtitle"></span><br><p class="mt-3"><i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp; 星期四, 十一月 7日 2019, 10:57 晚上</p><p>&nbsp;<i class="far fa-chart-bar"></i> <span class="post-count">1.1k 字 </span>&nbsp; &nbsp;<i class="far fa-clock"></i> <span class="post-count">5 分钟 </span>&nbsp; &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp; <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span> 次 </span>&nbsp;</p></div><div class="scroll-down-bar"><i class="fas fa-angle-down scroll-down-arrow"></i></div></div></div></div></header><main><div class="container-fluid"><div class="row"><div class="d-none d-lg-block col-lg-2"></div><div class="col-lg-8 nopadding-md"><div class="py-5 z-depth-3" id="board"><div class="post-content mx-auto" id="post"><div class="markdown-body"><h3 id="NOIp-Day1-T3-逛公园"><a href="#NOIp-Day1-T3-逛公园" class="headerlink" title="NOIp Day1 T3 逛公园"></a>NOIp Day1 T3 逛公园</h3><p>调了两天，自闭了</p><a id="more"></a><pre><code class="lang-cpp">/*/Saya-Javelin/*/
+#include &lt;cstring&gt;
+#include &lt;cstdio&gt;
+#include &lt;queue&gt;
+#define iln inline
+#define rgt register
+#define int long long
 
-<span class="hljs-keyword">using</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">memset</span>;
-<span class="hljs-keyword">using</span> <span class="hljs-built_in">std</span>::priority_queue;
+using std::memset;
+using std::priority_queue;
 
-<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> S=<span class="hljs-number">1000000</span>;
-<span class="hljs-keyword">char</span> RRR[S];
-<span class="hljs-keyword">char</span> *SSR, *UR;
+const int S=1000000;
+char RRR[S];
+char *SSR, *UR;
 
-<span class="hljs-function">iln <span class="hljs-keyword">char</span> <span class="hljs-title">fgc</span> <span class="hljs-params">()</span> </span>{
-    <span class="hljs-keyword">if</span> (SSR==UR) UR=(SSR=RRR)+fread (RRR, <span class="hljs-number">1</span>, S, <span class="hljs-built_in">stdin</span>);
-    <span class="hljs-keyword">return</span> SSR==UR ? EOF : *SSR++;
+iln char fgc () {
+    if (SSR==UR) UR=(SSR=RRR)+fread (RRR, 1, S, stdin);
+    return SSR==UR ? EOF : *SSR++;
 }
 
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> gc rrr=fgc()</span>
-<span class="hljs-comment">//#define gc rrr=getchar()</span>
-<span class="hljs-function">iln <span class="hljs-keyword">int</span> <span class="hljs-title">read</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> &amp;ur)</span> </span>{
-    <span class="hljs-keyword">int</span> ssr=<span class="hljs-number">1</span>; <span class="hljs-keyword">char</span> rrr; ur=<span class="hljs-number">0</span>;
-    <span class="hljs-keyword">while</span> (gc, rrr&gt;<span class="hljs-string">'9'</span> || rrr&lt;<span class="hljs-string">'0'</span>)
-    <span class="hljs-keyword">if</span> (rrr==<span class="hljs-string">'-'</span>) ssr=<span class="hljs-number">-1</span>;
-    <span class="hljs-keyword">while</span> (rrr&gt;=<span class="hljs-string">'0'</span> &amp;&amp; rrr&lt;=<span class="hljs-string">'9'</span>)
-    ur=ur*<span class="hljs-number">10</span>+rrr-<span class="hljs-string">'0'</span>, gc;
-    <span class="hljs-keyword">return</span> ur=ur*ssr;
+#define gc rrr=fgc()
+//#define gc rrr=getchar()
+iln int read (int &amp;ur) {
+    int ssr=1; char rrr; ur=0;
+    while (gc, rrr&gt;&#39;9&#39; || rrr&lt;&#39;0&#39;)
+    if (rrr==&#39;-&#39;) ssr=-1;
+    while (rrr&gt;=&#39;0&#39; &amp;&amp; rrr&lt;=&#39;9&#39;)
+    ur=ur*10+rrr-&#39;0&#39;, gc;
+    return ur=ur*ssr;
 }
-<span class="hljs-meta">#<span class="hljs-meta-keyword">undef</span> gc</span>
+#undef gc
 
-<span class="hljs-function">iln <span class="hljs-keyword">void</span> <span class="hljs-title">write</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> ur)</span> </span>{
-    <span class="hljs-keyword">if</span> (ur&lt;<span class="hljs-number">0</span>) <span class="hljs-built_in">putchar</span> (<span class="hljs-string">'-'</span>), ur*=<span class="hljs-number">-1</span>;
-    <span class="hljs-keyword">if</span> (ur&gt;=<span class="hljs-number">10</span>) write (ur/<span class="hljs-number">10</span>);
-    <span class="hljs-built_in">putchar</span> (ur%<span class="hljs-number">10</span>+<span class="hljs-string">'0'</span>);
-}
-
-<span class="hljs-function">iln <span class="hljs-keyword">void</span> <span class="hljs-title">wtn</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> ur)</span> </span>{
-    write (ur), <span class="hljs-built_in">putchar</span> (<span class="hljs-string">'\n'</span>);
+iln void write (int ur) {
+    if (ur&lt;0) putchar (&#39;-&#39;), ur*=-1;
+    if (ur&gt;=10) write (ur/10);
+    putchar (ur%10+&#39;0&#39;);
 }
 
-<span class="hljs-function">iln <span class="hljs-keyword">void</span> <span class="hljs-title">wts</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> ur)</span> </span>{
-    write (ur), <span class="hljs-built_in">putchar</span> (<span class="hljs-string">' '</span>);
+iln void wtn (int ur) {
+    write (ur), putchar (&#39;\n&#39;);
 }
 
-<span class="hljs-comment">//以上我奇怪的头文件&amp;快读 </span>
+iln void wts (int ur) {
+    write (ur), putchar (&#39; &#39;);
+}
 
-<span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> MAX=<span class="hljs-number">100005</span>, INF=<span class="hljs-number">0x7ffffffffff</span>ll;
-<span class="hljs-keyword">int</span> T;
-<span class="hljs-keyword">int</span> n, m, K, P;
-<span class="hljs-keyword">int</span> headt[MAX], kt=<span class="hljs-number">0</span>, headf[MAX], kf=<span class="hljs-number">0</span>;
-<span class="hljs-keyword">int</span> u, v, w;
-<span class="hljs-keyword">int</span> dis[MAX], f[<span class="hljs-number">55</span>][MAX];
-<span class="hljs-keyword">bool</span> insta[<span class="hljs-number">55</span>][MAX];
-<span class="hljs-keyword">int</span> ans=<span class="hljs-number">0</span>;
+//以上我奇怪的头文件&amp;快读 
 
-<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">edge</span> {</span>
-	<span class="hljs-keyword">int</span> t, ne, v;
-} et[MAX&lt;&lt;<span class="hljs-number">1</span>], ef[MAX&lt;&lt;<span class="hljs-number">1</span>];
+const int MAX=100005, INF=0x7ffffffffffll;
+int T;
+int n, m, K, P;
+int headt[MAX], kt=0, headf[MAX], kf=0;
+int u, v, w;
+int dis[MAX], f[55][MAX];
+bool insta[55][MAX];
+int ans=0;
 
-<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">info</span> {</span>
-	<span class="hljs-keyword">int</span> id, dis;
-	iln <span class="hljs-keyword">bool</span> <span class="hljs-keyword">operator</span> &lt; (<span class="hljs-keyword">const</span> info &amp;that) <span class="hljs-keyword">const</span> {
-		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>-&gt;dis &gt; that.dis;
-	}
+struct edge {
+    int t, ne, v;
+} et[MAX&lt;&lt;1], ef[MAX&lt;&lt;1];
+
+struct info {
+    int id, dis;
+    iln bool operator &lt; (const info &amp;that) const {
+        return this-&gt;dis &gt; that.dis;
+    }
 };
 
-<span class="hljs-function">iln <span class="hljs-keyword">void</span> <span class="hljs-title">add</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j, <span class="hljs-keyword">int</span> van, edge *e, <span class="hljs-keyword">int</span> *head, <span class="hljs-keyword">int</span> &amp;cnt)</span> </span>{<span class="hljs-comment">//传入指针大概方便些? 指针并不大会用... </span>
-	e[++cnt]= (edge) {j, head[i], van};
-	head[i]=cnt;
+iln void add (int i, int j, int van, edge *e, int *head, int &amp;cnt) {//传入指针大概方便些? 指针并不大会用... 
+    e[++cnt]= (edge) {j, head[i], van};
+    head[i]=cnt;
 }
 
 priority_queue &lt;info&gt; q;
 
-<span class="hljs-function">iln <span class="hljs-keyword">void</span> <span class="hljs-title">SPFA</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> start, edge *e, <span class="hljs-keyword">int</span> *head)</span> </span>{<span class="hljs-comment">//你以为是SPFA? 其实是我dio(划)dijkstra哒! </span>
-	dis[start]=<span class="hljs-number">0</span>, q.push((info){start, <span class="hljs-number">0</span>}); 
-	<span class="hljs-keyword">while</span> (!q.empty()) {
-		info now=q.top(); q.pop();
-		<span class="hljs-keyword">if</span> (now.dis!=dis[now.id]) <span class="hljs-keyword">continue</span>;
-		<span class="hljs-keyword">for</span> (rgt <span class="hljs-keyword">int</span> i=head[now.id], to=e[i].t; i; i=e[i].ne, to=e[i].t)  
-			<span class="hljs-keyword">if</span> (dis[to]&gt;dis[now.id]+e[i].v) {
-				dis[to]=dis[now.id]+e[i].v;
-				q.push ((info) {to, dis[to]});
-			}
-	}
+iln void SPFA (int start, edge *e, int *head) {//你以为是SPFA? 其实是我dio(划)dijkstra哒! 
+    dis[start]=0, q.push((info){start, 0}); 
+    while (!q.empty()) {
+        info now=q.top(); q.pop();
+        if (now.dis!=dis[now.id]) continue;
+        for (rgt int i=head[now.id], to=e[i].t; i; i=e[i].ne, to=e[i].t)  
+            if (dis[to]&gt;dis[now.id]+e[i].v) {
+                dis[to]=dis[now.id]+e[i].v;
+                q.push ((info) {to, dis[to]});
+            }
+    }
 }
 
-<span class="hljs-function">iln <span class="hljs-keyword">int</span> <span class="hljs-title">dfs</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> now, <span class="hljs-keyword">int</span> nowk, edge *e, <span class="hljs-keyword">int</span> *head)</span> </span>{
-	<span class="hljs-comment">//now表示当前位置</span>
-	<span class="hljs-comment">//nowk表示当前路径还能再比最短路径长多少</span>
-	<span class="hljs-comment">//(也就是接下去还能再把当前路径长度增加多少, 且仍符合条件) </span>
-	<span class="hljs-comment">//e和head决定跑反图还是原图</span>
-	<span class="hljs-comment">//似乎跑反图快些? 但跑的快不一定赢(划) 跑原图也能跑过去</span>
-	<span class="hljs-keyword">if</span> (nowk&gt;K) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-	<span class="hljs-comment">//此时的k不符合条件, 直接返回掉 </span>
-	<span class="hljs-comment">//(nowk不会小于0, 要不然最短路就是萎的;)</span>
-	<span class="hljs-comment">//(nowk如果此时大于K了, 接下去必然仍大于K, 要不然最短路就又是萎的)</span>
-	<span class="hljs-keyword">if</span> (insta[nowk][now]) <span class="hljs-keyword">return</span> insta[nowk][now]=<span class="hljs-number">0</span>, <span class="hljs-number">-1</span>;
-	<span class="hljs-comment">//相同的now和nowk又跑了一次, 说明有0环 </span>
-	<span class="hljs-keyword">if</span> (f[nowk][now]!=<span class="hljs-number">-1</span>) <span class="hljs-keyword">return</span> f[nowk][now];
-	<span class="hljs-comment">//记忆化, 这个点跑过且长度相同的就直接return </span>
-	insta[nowk][now]=<span class="hljs-number">1</span>;
-	rgt <span class="hljs-keyword">int</span> tmp=<span class="hljs-number">0</span>;
-	<span class="hljs-keyword">for</span> (rgt <span class="hljs-keyword">int</span> i=head[now]; i; i=e[i].ne) {
-		rgt <span class="hljs-keyword">int</span> to=e[i].t, totmp, nowdis=dis[to]+e[i].v-dis[now];
-		<span class="hljs-comment">//to是这条边连向的点, totmp表示连出去的点的方案数(那个点的答案)</span>
-		<span class="hljs-comment">//nowdis表示走这条边和最短路长度相差多少 </span>
-		<span class="hljs-keyword">if</span> (nowdis&gt;=<span class="hljs-number">0</span> &amp;&amp; nowdis&lt;=nowk) {<span class="hljs-comment">//如果走这条边合法 </span>
-			totmp= dfs (to, nowk-nowdis, e, head);<span class="hljs-comment">//获取答案 </span>
-			<span class="hljs-keyword">if</span> (totmp==<span class="hljs-number">-1</span>) <span class="hljs-keyword">return</span> insta[nowk][now]=<span class="hljs-number">0</span>, f[nowk][now]=<span class="hljs-number">-1</span>;<span class="hljs-comment">//有0环, 退出 </span>
-			(tmp+=totmp)%=P;<span class="hljs-comment">//累加 </span>
-		}
-	}
-	insta[nowk][now]=<span class="hljs-number">0</span>;
-	<span class="hljs-keyword">if</span> (now==n &amp;&amp; !nowk) tmp=<span class="hljs-number">1</span>;
-	<span class="hljs-comment">//如果nowk为0且此时在终点, 说明此时跑的是最短路径, 这个答案是最开始的答案, 所以把它初始化为 1 </span>
-	<span class="hljs-keyword">return</span> f[nowk][now]=tmp;<span class="hljs-comment">//记忆化 </span>
+iln int dfs (int now, int nowk, edge *e, int *head) {
+    //now表示当前位置
+    //nowk表示当前路径还能再比最短路径长多少
+    //(也就是接下去还能再把当前路径长度增加多少, 且仍符合条件) 
+    //e和head决定跑反图还是原图
+    //似乎跑反图快些? 但跑的快不一定赢(划) 跑原图也能跑过去
+    if (nowk&gt;K) return 0;
+    //此时的k不符合条件, 直接返回掉 
+    //(nowk不会小于0, 要不然最短路就是萎的;)
+    //(nowk如果此时大于K了, 接下去必然仍大于K, 要不然最短路就又是萎的)
+    if (insta[nowk][now]) return insta[nowk][now]=0, -1;
+    //相同的now和nowk又跑了一次, 说明有0环 
+    if (f[nowk][now]!=-1) return f[nowk][now];
+    //记忆化, 这个点跑过且长度相同的就直接return 
+    insta[nowk][now]=1;
+    rgt int tmp=0;
+    for (rgt int i=head[now]; i; i=e[i].ne) {
+        rgt int to=e[i].t, totmp, nowdis=dis[to]+e[i].v-dis[now];
+        //to是这条边连向的点, totmp表示连出去的点的方案数(那个点的答案)
+        //nowdis表示走这条边和最短路长度相差多少 
+        if (nowdis&gt;=0 &amp;&amp; nowdis&lt;=nowk) {//如果走这条边合法 
+            totmp= dfs (to, nowk-nowdis, e, head);//获取答案 
+            if (totmp==-1) return insta[nowk][now]=0, f[nowk][now]=-1;//有0环, 退出 
+            (tmp+=totmp)%=P;//累加 
+        }
+    }
+    insta[nowk][now]=0;
+    if (now==n &amp;&amp; !nowk) tmp=1;
+    //如果nowk为0且此时在终点, 说明此时跑的是最短路径, 这个答案是最开始的答案, 所以把它初始化为 1 
+    return f[nowk][now]=tmp;//记忆化 
 }
 
-<span class="hljs-function"><span class="hljs-keyword">signed</span> <span class="hljs-title">main</span> <span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>{
-	read (T);
-	START: <span class="hljs-keyword">while</span> (T--) {
-		kt=kf=ans=<span class="hljs-number">0</span>;<span class="hljs-comment">//多组数据不清空, 满屏爆蛋见祖宗 </span>
-		read (n), read (m), read (K), read (P);
-		<span class="hljs-keyword">for</span> (rgt <span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;=n; ++i) {<span class="hljs-comment">//一坨memset有点长, 手写短些 (但慢了好多?  </span>
-			headt[i]=headf[i]=<span class="hljs-number">0</span>, dis[i]=INF;
-			<span class="hljs-keyword">for</span> (rgt <span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>; j&lt;=K; ++j) f[j][i]=<span class="hljs-number">-1</span>;
-		}
-		<span class="hljs-keyword">for</span> (rgt <span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=m; ++i) {
-			read (u), read (v), read (w);
-			add (u, v, w, et, headt, kt), add (v, u, w, ef, headf, kf);<span class="hljs-comment">//原图和反图 </span>
-		}
-		SPFA (n, ef, headf);
-		<span class="hljs-comment">//因为我要求的是每个点到终点的距离, 又因为是有向图, 所以得跑反图, 这个不理解可以手膜</span>
-		<span class="hljs-comment">//(我一开始连这个都没懂...这人真的菜) </span>
-		<span class="hljs-keyword">for</span> (rgt <span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;=K; ++i) {<span class="hljs-comment">//从0开始, 也就是从最短路开始初始化 </span>
-			rgt <span class="hljs-keyword">int</span> tmp=dfs (<span class="hljs-number">1</span>, i, et, headt);
-			<span class="hljs-keyword">if</span> (tmp==<span class="hljs-number">-1</span>) { <span class="hljs-built_in">puts</span> (<span class="hljs-string">"-1"</span>); <span class="hljs-keyword">goto</span> START; }<span class="hljs-comment">//有0环，终止交易 (?) </span>
-			<span class="hljs-keyword">else</span> (ans+=tmp)%=P;<span class="hljs-comment">//所有方案和 </span>
-		}
-		wtn (ans);
-	}
-	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+signed main (void) {
+    read (T);
+    START: while (T--) {
+        kt=kf=ans=0;//多组数据不清空, 满屏爆蛋见祖宗 
+        read (n), read (m), read (K), read (P);
+        for (rgt int i=0; i&lt;=n; ++i) {//一坨memset有点长, 手写短些 (但慢了好多?  
+            headt[i]=headf[i]=0, dis[i]=INF;
+            for (rgt int j=0; j&lt;=K; ++j) f[j][i]=-1;
+        }
+        for (rgt int i=1; i&lt;=m; ++i) {
+            read (u), read (v), read (w);
+            add (u, v, w, et, headt, kt), add (v, u, w, ef, headf, kf);//原图和反图 
+        }
+        SPFA (n, ef, headf);
+        //因为我要求的是每个点到终点的距离, 又因为是有向图, 所以得跑反图, 这个不理解可以手膜
+        //(我一开始连这个都没懂...这人真的菜) 
+        for (rgt int i=0; i&lt;=K; ++i) {//从0开始, 也就是从最短路开始初始化 
+            rgt int tmp=dfs (1, i, et, headt);
+            if (tmp==-1) { puts (&quot;-1&quot;); goto START; }//有0环，终止交易 (?) 
+            else (ans+=tmp)%=P;//所有方案和 
+        }
+        wtn (ans);
+    }
+    return 0;
 }
 
-<span class="hljs-comment">//询问一个图中与最短路长度相差不超过K的路径条数</span>
-<span class="hljs-comment">//显然有0环就有无数条</span>
-<span class="hljs-comment">//记搜就行了</span>
- 
-<span class="hljs-comment">//为啥这么详细 ?因为我菜</span>
-<span class="hljs-comment">//写了两天, 或者说对着题解抄了两天 </span>
-<span class="hljs-comment">//凎, csp岂不是要挂 </span>
+//询问一个图中与最短路长度相差不超过K的路径条数
+//显然有0环就有无数条
+//记搜就行了
+
+//为啥这么详细 ?因为我菜
+//写了两天, 或者说对着题解抄了两天 
+//凎, csp岂不是要挂
 </code></pre><hr></div><br><div><p><span><i class="iconfont icon-inbox"></i> <a class="hover-with-bg" href="/categories/OI%E5%A4%8D%E8%B5%9B">OI复赛</a> &nbsp; </span>&nbsp;&nbsp; <span><i class="iconfont icon-tag"></i> <a class="hover-with-bg" href="/tags/%E9%A2%98%E8%A7%A3">题解</a> <a class="hover-with-bg" href="/tags/NOIp">NOIp</a></span></p><p class="note note-warning">文章若无特殊声明，则采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> ，转载时请一定要注明出处哦！</p></div></div></div></div><div class="d-none d-lg-block col-lg-2 toc-container"><div id="toc"><p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p><div id="tocbot"></div></div></div></div></div><div class="col-lg-7 mx-auto nopadding-md"><div class="container comments mx-auto" id="comments"><br><br><div id="vcomments" style="width:100%;margin-left:auto;margin-right:auto;padding-left:7.5%;padding-right:7.5%;padding-top:5%;background-color:#fff;border-radius:.5rem;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19)!important"></div><script defer src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script defer src="//unpkg.com/valine/dist/Valine.min.js"></script><script>var notify=!1,verify=!1,oldLoad=window.onload;window.onload=function(){new Valine({el:"#vcomments",notify:notify,verify:verify,app_id:"tR6HPCDEBDB2rve2daGvCr02-MdYXbMMI",app_key:"srPbvbi137sVxCdvT2oJjbnJ",placeholder:"有没有想对咱说些啥呢~",avatar:"identicon",meta:["nick","mail","link"],pageSize:"10"}),oldLoad&&oldLoad()}</script><noscript>Please enable JavaScript to view the <a href="https://valine.js.org" rel="nofollow noopener">comments powered by Valine.</a></noscript></div></div></main><a class="z-depth-1" id="scroll-top-button" href="#" role="button"><i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i></a><div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg" role="document"><div class="modal-content"><div class="modal-header text-center"><h4 class="modal-title w-100 font-weight-bold">搜索</h4><button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body mx-3"><div class="md-form mb-5"><input type="text" id="local-search-input" class="form-control validate"> <label data-error="x" data-success="v" for="local-search-input">关键词</label></div><div class="list-group" id="local-search-result"></div></div></div></div></div><footer class="mt-5"><div class="text-center py-3"><a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><b>Fluid</b></a><br>&nbsp;<span id="busuanzi_container_site_pv">总访问量 <span id="busuanzi_value_site_pv"></span> 次</span>&nbsp; &nbsp;<span id="busuanzi_container_site_uv">总访客数 <span id="busuanzi_value_site_uv"></span> 人</span>&nbsp;<br></div></footer><script src="/lib/jquery/jquery.min.js"></script><script src="/lib/popper/popper.min.js"></script><script src="/lib/bootstrap/js/bootstrap.min.js"></script><script src="/lib/mdbootstrap/js/mdb.min.js"></script><script src="/js/main.js"></script><script src="/lib/tocbot/tocbot.min.js"></script><script src="/js/post.js"></script><script src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="/lib/prettify/prettify.min.js"></script><script>$(document).ready(function(){$("pre").addClass("prettyprint  "),prettyPrint()})</script><script src="/lib/typed/typed.min.js"></script><script>var typed=new Typed("#subtitle",{strings:["  ","NOIp2017-逛公园&nbsp;"],cursorChar:"_",typeSpeed:60,loop:!1});typed.stop(),$(document).ready(function(){$(".typed-cursor").addClass("h2"),typed.start()})</script><script src="/lib/anchor/anchor.min.js"></script><script>anchors.options = {
       placement: "right",
       visible: "false",
@@ -161,4 +161,17 @@ priority_queue &lt;info&gt; q;
     for (item of el) {
       res.push(".markdown-body > " + item)
     }
-    anchors.add(res.join(", "))</script><script src="/js/local-search.js"></script><script>var path="/local-search.xml",inputArea=document.querySelector("#local-search-input");inputArea.onclick=function(){getSearchFile(path),this.onclick=null}</script><script src="/lib/fancybox/jquery.fancybox.min.js"></script><script>$("#post img:not(.no-zoom img, img[no-zoom])").each(function(){var t=document.createElement("a");$(t).attr("data-fancybox","images"),$(t).attr("href",$(this).attr("src")),$(this).wrap(t)})</script><link rel="stylesheet" href="/lib/katex/katex.min.css"></body></html>
+    anchors.add(res.join(", "))</script><script src="/js/local-search.js"></script><script>var path="/local-search.xml",inputArea=document.querySelector("#local-search-input");inputArea.onclick=function(){getSearchFile(path),this.onclick=null}</script><script src="/lib/fancybox/jquery.fancybox.min.js"></script><script>$("#post img:not(.no-zoom img, img[no-zoom])").each(function(){var t=document.createElement("a");$(t).attr("data-fancybox","images"),$(t).attr("href",$(this).attr("src")),$(this).wrap(t)})</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+          tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+              processEscapes: true,
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+          }
+      });
+
+      MathJax.Hub.Queue(function() {
+          var all = MathJax.Hub.getAllJax(), i;
+          for(i=0; i < all.length; i += 1) {
+              all[i].SourceElement().parentNode.className += ' has-jax';
+          }
+      });</script><script src="https://cdn.staticfile.org/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>
